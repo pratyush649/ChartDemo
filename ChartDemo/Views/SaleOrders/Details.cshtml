@@ -1,0 +1,30 @@
+﻿@model ChartDemo.Models.SaleOrder
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>SaleOrder</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Zone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sale_Amount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sale_Amount)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Sale_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
